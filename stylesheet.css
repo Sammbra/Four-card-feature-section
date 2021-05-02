@@ -22,12 +22,18 @@ body {
     line-height: 1.5;
 }
 
+a {
+    text-decoration: none;
+}
+
 p {
     line-height: 1.6;
 }
 
 #container {
     padding: 4.6rem 1.5rem;
+    max-width: 25rem;
+    margin: 0 auto;
 }
 
 #container .header-1 {
@@ -49,50 +55,51 @@ p {
     color: var(--grayish-blue);
 }
 
-#container #grid {
+#container #flex {
     margin-top: 4.5rem;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    
 }
 
-#container #grid .card {
-    padding: 1.5rem;
+#container #flex .card {
+    padding: 1.5rem 2rem;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: rgba(115, 115, 235, 0.25) 0px 13px 27px -5px, rgba(235, 226, 226, 0.3) 0px 8px 16px -8px;
     line-height: 1.6;
 }
 
-#container #grid .card h3 {
+#container #flex .card h3 {
     font-size: 1.25rem;
     color: var(--dark-blue)
 }
 
-#container #grid .card p {
+#container #flex .card p {
     font-size: 0.8rem;
     color: var(--grayish-blue);
     margin-bottom: 2rem;
 }
 
-#container #grid .card .image {
+#container #flex .card .image {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
-#container #grid .card .image img {
+#container #flex .card .image img {
     height: 3.3125rem;
-    width: 3.3125rem;
     display: block;
 }
 
-#container #grid .card {
+#container #flex .card {
     border-top: 0.25rem solid var(--cyan-color);
     position: relative;
 }
 
-#container #grid .card::before {
+#container #flex .card::before {
     content: '';
     position: absolute;
     background-color: #fff;
@@ -103,14 +110,29 @@ p {
     overflow: hidden;
 }
 
-#container #grid .card-2 {
+#container #flex .card-2 {
     border-top: 0.25rem solid var(--red-color);
 }
 
-#container #grid .card-3 {
+#container #flex .card-3 {
     border-top: 0.25rem solid var(--orange-color);
 }
 
-#container #grid .card-4 {
+#container #flex .card-4 {
     border-top: 0.25rem solid var(--blue-color);
+}
+
+footer .attribution {
+    text-align: center;
+    font-size: 0.6875rem;
+    padding: 1rem;
+}
+
+footer .attribution a {
+    color: #000;
+    transition: all 150ms ease-in;
+}
+
+footer .attribution a:hover {
+    color: var(--orange-color);
 }
